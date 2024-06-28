@@ -1,8 +1,0 @@
-<img class="img" [src]="product.pImg">
-<p>Name : {{product.name}}</p>
-<p>Price :  {{ '$'+ product.price}}</p>
-<p>Colour : {{product.color}}</p>
-<p>Discounted price: {{ getDiscountedPrice() }} [  8.5%] </p>
-<p>Final Price : {{product.price - product.price * product.discount / 100}}</p>
-<p>{{product.inStock >0 ? 'only  ' + '  '+product.inStock + '   items left':'Not in Stock'}}</p>
-<button [disabled]="!(product.inStock > 0)">Buy Now</button>

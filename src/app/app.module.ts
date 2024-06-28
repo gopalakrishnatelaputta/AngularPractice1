@@ -7,7 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TopHeaderComponent } from './top-header/top-header.component';
 import { TopMenuComponent } from './header/top-menu/top-menu.component';
 import { MainMenuComponent } from './header/main-menu/main-menu.component';
-import { ProductListComponent } from './product-list/product-list.component';
+import { FormsModule } from '@angular/forms';
+import { ContainerComponent } from './container/container.component';
+import { SearchComponentComponent } from './container/search-component/search-component.component';
+import { ProductListComponent } from './container/product-list/product-list.component';
+import { ProductComponent } from './container/product-list/product/product.component';
+import { FilterComponent } from './container/product-list/filter/filter.component';
 
 
 @NgModule({
@@ -17,12 +22,17 @@ import { ProductListComponent } from './product-list/product-list.component';
     TopHeaderComponent,
     TopMenuComponent,
     MainMenuComponent,
+    ContainerComponent,
+    SearchComponentComponent,
     ProductListComponent,
+    ProductComponent,
+    FilterComponent
 
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

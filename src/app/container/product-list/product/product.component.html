@@ -1,0 +1,29 @@
+<div class="product-card"  >
+  <div class="top-card">
+    <div>
+      <i style="font-size: 20px;"> &#9825;</i>
+      <i style="font-size: 12px;margin-left: 3px;margin-bottom: 5px;">{{product.id}}</i>
+    </div>
+    <div class="discount-card" *ngIf="product.discount">
+      <p>{{product.discount}}% OFF</p>
+    </div>
+  </div>
+  <img [src]="product.image" alt="{{ product.name }}" class="product-image">
+  <div class="product-details">
+    <h2>{{ product.name }}</h2>
+    <p>{{ product.description }}</p>
+    <p class="price">${{ product.price }}</p>
+    <p class="rating">Rating: {{ product.rating }} stars</p>
+    <p class="brand">Brand: {{ product.brand }}</p>
+    <p class="color">Color: {{ product.color }}</p>
+    <p class="connectivity">Connectivity: {{ product.connectivity }}</p>
+    <p class="components_included">Components included :{{product.components_included}}</p>
+    <p class="wireless" [ngClass]="{'yes':product.wireless,'no':!product.wireless}">
+      Wireless:{{product.wireless ?'Yes':'No'}}
+    </p>
+    <p [ngStyle]="{'font-weight': 'bold', 'color': product.inventory === 'inStock' ? 'green' : 'red'}">
+      {{ product.inventory === 'inStock' ? 'In Stock' : 'Out Of Stock' }}
+    </p>
+
+  </div>
+</div>

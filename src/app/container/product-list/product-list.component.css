@@ -1,0 +1,15 @@
+.product-list {
+display: flex;
+flex-direction: column;
+}
+.filter1{
+margin-bottom: 30px;
+margin-top: -20px;
+
+}
+.product-list1{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+

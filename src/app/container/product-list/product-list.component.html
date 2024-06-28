@@ -1,0 +1,14 @@
+<!-- src/app/product-list/product-list.component.html -->
+<div class="product-list">
+  <div class="filter1">
+    <app-filter [all]="totalProductCount" [inStock]="inStockCount" [outOfStock]="outOfStockCount"
+      (selectedFilterRadioButtonChanged)="onFilterChanged($event)"></app-filter>
+  </div>
+  <div class="product-list1" >
+<!-- *ngIf="selectedFilterRadioButton==='all' || prod.inventory===selectedFilterRadioButton " -->
+    <div *ngFor="let prod of products">
+      <app-product [product]="prod"  *ngIf="searchText==='' || prod.name.toLowerCase().includes(searchText)"></app-product>
+    </div>
+  </div>
+</div>
+
