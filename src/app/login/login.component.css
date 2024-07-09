@@ -1,0 +1,101 @@
+/* Container styling */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+/* Card styling */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+}
+.login-style
+{
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 20px;
+font-weight: normal;
+margin-top: 5px;
+margin-bottom: 10px;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 25px;
+}
+
+/* Label styling */
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: lighter;
+}
+
+/* Input styling */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Link styling */
+.dont-have-account {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.dont-have-account a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.dont-have-account a:hover {
+  text-decoration: underline;
+}
+.forgot-password{
+  height: 20px;
+  width: 140px;
+  background-color: bisque;
+  color: rgb(143, 6, 6);
+  font-weight: normal;
+  align-items: center;
+  justify-content: center;
+  margin-left: 200px;
+  border-radius: 3px;
+  border: none;
+}

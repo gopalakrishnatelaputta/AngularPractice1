@@ -15,3 +15,36 @@
   .entire{
   padding: 20px;
   }
+
+  .featured-brand-container{
+    height: 240px;
+    width: 80%;
+    background-color: rgb(41, 39, 39);
+    margin-left: 110px;
+    /* margin-top: 15px; */
+    display: flex;
+    flex-direction: row;
+    color: white;
+    align-items: center;
+    justify-content:center;
+    }
+    .new-arrival-heading{
+      margin: 85px;
+      }
+  .cards-alignment{
+display: flex;
+flex-direction: row;
+padding: 10px;
+
+  }
+.button-style{
+background-color: burlywood;
+height: 25px;
+width: 100%;
+font-size: 15px;
+border-radius: 4px;
+font-weight: bold;
+}
+.title{
+color: brown;
+}

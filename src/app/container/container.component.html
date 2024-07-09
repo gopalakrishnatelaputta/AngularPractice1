@@ -1,18 +1,26 @@
 <div class="entire">
-  <!-- <img class="img" [src]="product.pImg">
-  <p>Name : {{product.name}}</p>
-  <p>Price :  {{ '$'+ product.price}}</p>
-  <p>Colour : {{product.color}}</p>
-  <p>Discounted price: {{ getDiscountedPrice() }} [  8.5%] </p>
-  <p>Final Price : {{product.price - product.price * product.discount / 100}}</p>
-  <p [ngClass]="{
-    'in-stock': product.inStock > 0,
-    'out-of-stock': product.inStock === 0
-  }">
-  {{ product.inStock > 0 ? 'only ' + product.inStock + ' items left' : 'Not in Stock' }}
-  </p>
-  <button [disabled]="!(product.inStock > 0)">Buy Now</button> -->
 
-<app-search-component (searchTextChanged)="setSearchText($event)"></app-search-component>
-<app-product-list [searchText]="searchText"></app-product-list>
+  <app-search-component (searchTextChanged)="setSearchText($event)"></app-search-component>
+  <app-product-list [searchText]="searchText" #productListComponent></app-product-list>
+  <app-product-detail *ngIf="productListComponent.selectedProduct"
+    [productListComp]="productListComponent"></app-product-detail>
+  <div class="featured-brand-container">
+    <div class="new-arrival-heading">
+      <h2>New Arrivals in Popular Brands</h2>
+    </div>
+    <div class="cards-alignment">
+<app-featured-brands >
+  <h3 class="title">New Arrivals in Sparx</h3>
+<button class="button-style"><h5 style="font-weight: bold;">Click here for Sparx</h5></button>
+</app-featured-brands>
+<app-featured-brands>
+  <h3 class="title">New Arrivals in Adidas</h3>
+  <button class="button-style"><h5 style="font-weight: bold;">Click here for Adidas</h5></button>
+</app-featured-brands>
+<app-featured-brands>
+  <h3 class="title">New Arrivals in Reebok</h3>
+  <button class="button-style"><h5 style="font-weight: bold;">Click here for Reebok</h5></button>
+</app-featured-brands>
+    </div>
+  </div>
 </div>

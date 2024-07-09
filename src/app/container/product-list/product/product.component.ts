@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-
+import { Product } from 'src/app/models/Product';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -8,20 +8,6 @@ import { Component, Input } from '@angular/core';
 export class ProductComponent {
 
   @Input()
-  product: {
-    inventory?: any;
-    components_included?: any;
-    id: number,
-    name: string,
-    description: string,
-    price: number,
-    image: string,
-    rating: number,
-    brand: string,
-    color?: string,
-    connectivity?: string,
-    wireless?: boolean,
-    discount?: number
-  } = undefined;
+  product:Product;
 
 }

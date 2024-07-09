@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-
+import { Component, ViewChild } from '@angular/core';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductListComponent } from './product-list/product-list.component';
 @Component({
   selector: 'app-container',
   templateUrl: './container.component.html',
@@ -24,4 +25,7 @@ this.searchText=value;
 getDiscountedPrice(){
 return this.product.price * this.product.discount / 100
 }
+
+ @ViewChild(ProductListComponent) productListComponent:ProductListComponent;
+
 }

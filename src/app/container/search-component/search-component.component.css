@@ -21,7 +21,7 @@
   .btn-serach{
   padding: 12px 30px;
   background-color: #28282B;
-  margin-left: 0px;
+  margin-left: -3px;
   height: 5.5vh;
   color: white;
   font-size: 12px;
@@ -29,7 +29,7 @@
 .btn-search-disabled{
 padding: 12px 30px;
 background-color: #aaa;
-margin-left: 0px;
+margin-left: -2px;
 color: #999;
 border: #aaa 1px solid;
 cursor: not-allowed;

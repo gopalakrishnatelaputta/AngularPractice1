@@ -12,4 +12,20 @@ margin-top: -20px;
   flex-wrap: wrap;
   justify-content: space-around;
 }
+/* src/app/product-list/product-list.component.css */
+.product-page {
+  display: flex;
+}
+
+.product-list {
+  flex: 1;
+  padding: 10px;
+}
+
+.product-detail {
+  flex: 1;
+  padding: 10px;
+  border-left: 1px solid #ccc;
+}
+
 

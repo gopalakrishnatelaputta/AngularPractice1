@@ -1,0 +1,71 @@
+<div class="ekart-product-details-info scroll">
+  <div class="ekart-product-close">
+    <i class="fa fa-times" aria-hidden="true"></i>
+  </div>
+  <div class="ekart-product-detail-image">
+    <img src="{{product.image}}" class="ekart-product-detail-image">
+  </div>
+  <div class="ekart-product-detail">
+    <div class="ekart-product-detail-name">
+      <h2>{{product.name}}</h2>
+    </div>
+    <div class="ekart-product-detail-gbc">
+      <span>GREY</span>
+      <span>BLACK</span>
+      <span>WHITE</span>
+    </div>
+    <div class="ekart-product-detail-price">
+      <p>Price Each Pair:
+        <span style="background-color: red; color: white;"><s>{{product.discount}}</s></span>
+        <span style="background-color: green; color: white;">${{product.price}}</span> (Inclusive of all taxes)
+      </p>
+    </div>
+    <div class="brand-style">
+       <h3>Brand :</h3>
+       <h4>{{product.brand}}</h4>
+    </div>
+    <div class="brand-style">
+      <h3>Connectivity :</h3>
+      <h4>{{product.connectivity}}</h4>
+   </div>
+   <div class="brand-style">
+    <h3>Wireless :</h3>
+    <h4>{{product.wireless}}</h4>
+ </div>
+ <div class="brand-style">
+  <h3>Rating :</h3>
+  <h4>{{product.rating}}</h4>
+</div>
+<div class="brand-style">
+  <h3>Avaliability :</h3>
+  <h4>{{product.inventory}}</h4>
+</div>
+    <div class="ekart-product-detail-size" style="padding: 5px 0px; border-bottom: #ccc 2px solid">
+      <h4>Available Size</h4>
+      <div style="margin-top: 20px;">
+        <span class="ekart-product-detail-available-size">6</span>
+        <span class="ekart-product-detail-available-size">7</span>
+        <span class="ekart-product-detail-available-size">8</span>
+        <span class="ekart-product-detail-available-size">9</span>
+      </div>
+    </div>
+    <div class="ekart-product-detail-desc" style="padding: 5px 0px; border-bottom: #ccc 2px solid">
+      <h4>{{product.description}}</h4>
+      <div style="margin-top: 20px;">
+        <p>DESCRIPTION</p>
+      </div>
+    </div>
+<div class="buttons">
+    <div class="ekart-product-detail-add-to-cart">
+      <button class="btn-add-to-cart" *ngIf="product.inventory==='inStock'; else notifyMe">ADD TO CART</button>
+    <ng-template #notifyMe>
+      <button class="btn-add-to-cart-notify-me" >NOTIFY ME</button>
+    </ng-template>
+    </div>
+    <div class="ekart-product-detail-buyNow">
+      <button class="btn-buy-now" *ngIf="product.inventory==='inStock'">BUY NOW</button>
+    </div>
+</div>
+  </div>
+  <div class="overlay"></div>
+</div>

@@ -1,0 +1,21 @@
+
+
+.card{
+height: 190px;
+
+width: 75%;
+background-color: whitesmoke;
+color: black;
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+border-radius: 2px;
+
+}
+.paragraph{
+margin-left: 10px;
+font-size: 13px;
+
+}
+
