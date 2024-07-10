@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TopHeaderComponent } from './top-header/top-header.component';
 import { TopMenuComponent } from './header/top-menu/top-menu.component';
 import { MainMenuComponent } from './header/main-menu/main-menu.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContainerComponent } from './container/container.component';
 import { SearchComponentComponent } from './container/search-component/search-component.component';
 import { ProductListComponent } from './container/product-list/product-list.component';
@@ -33,7 +33,7 @@ const routes:Routes=[
 {path:'forgotPassword',component:ForgotPasswordComponent},
 {path:'requestOTP',component:RequestOTPComponent},
 {path:'verifyOTP',component:VerifyOTPComponent},
-{path:'resetOTP',component:ResetPasswordComponent}
+{path:'resetPassword',component:ResetPasswordComponent}
 ]
 
 
@@ -67,7 +67,8 @@ const routes:Routes=[
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
-    RouterOutlet
+    RouterOutlet,
+    ReactiveFormsModule
 
 
   ],

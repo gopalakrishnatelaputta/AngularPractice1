@@ -19,7 +19,7 @@ export class ForgotPasswordComponent {
     this.authService.requestOTP(this.email).subscribe(
       response => {
         console.log("OTP requested successfully", response);
-        this.otpRequested = true;
+        this.router.navigate(['/verifyOTP'],{queryParams:{email:this.email}} );
       },
       error => {
         console.error("Failed to request OTP", error);

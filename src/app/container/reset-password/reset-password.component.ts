@@ -11,6 +11,7 @@ export class ResetPasswordComponent implements OnInit{
 
   email:string='';
   newPassword:string='';
+  confirmNewPassword:string='';
 
   constructor(private authService:AuthServiceService,private route:ActivatedRoute,private router:Router){}
 
@@ -19,7 +20,17 @@ export class ResetPasswordComponent implements OnInit{
 
   }
 
-  resetPassword(email:string,newPassword:string){
+  confirmPassword(){
+    if(this.newPassword!=this.confirmNewPassword){
+      alert("Passwords do not match ...");
+      return;
+    }
+    else{
+      this.resetPassword();
+    }
+  }
+
+  resetPassword(){
       this.authService.resetPassword(this.email,this.newPassword).subscribe(response=>{
         console.log("Password reset Successfully completed !!",response);
         this.router.navigate(['/login']);
